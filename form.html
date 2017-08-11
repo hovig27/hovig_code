@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel ='stylesheet' type='text/css' href='css/bootstrap.css'>
+        <style>
+            body {
+             background-color:green;
+            }
+            label {
+             display:block;
+            }
+            fieldset {
+            margin-left:36%;
+            margin-top:7%;
+            margin-right:6%;
+            padding-bottom:4%;
+            padding-right:5%;
+            padding-left:2%;
+            float:left;     
+            background:white;    
+            }
+            label input {
+                width:100%;
+            }
+            label textarea {
+                width:100%;
+            }       
+            #my_submit {
+                background: greenyellow;
+                width:100%;
+                padding:10px;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <form action = "one.php" method = "post">
+            <fieldset>
+                <label>
+                    <h2>Colorlib Contact Form</h2>
+                </label>
+                <label>
+                    <p>Contact us for custom quote</p>
+                </label>
+                <label>
+                    <input type = "text" id='username' placeholder = "Your name" required autofocus>
+                </label>
+                <label><br />
+                    <input type='password' id='password' placeholder="Password" required autofocus>
+                </label>
+                <label> <br>
+                <input type='button' value='Sign in' onclick="clicked()">
+                </label>
+            </fieldset>
+        </form>
+        <script type ='text/javascript' src='js/bootstrap.min.js'></script>
+        <script type='text/javascript'>
+            function clicked(){
+                var user = document.getElementById('username');
+                var pass = document.getElementById('password');
+
+                var coruser = 'hovik';
+                var corpass = '123';
+
+                if(user.value == coruser && pass.value == corpass){
+                    window.alert('you logged in as ' + user.value);
+                }
+                else{
+                    window.alert('Incorrect username or password!');
+                }
+            }        
+        </script>
+    </body>
+</html>
